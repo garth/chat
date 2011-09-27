@@ -1,0 +1,44 @@
+html, body {
+  height:100%; margin: 0; padding: 0;
+}
+body {
+  background: rgb(92,92,92) no-repeat;
+  background-image: linear-gradient(bottom, rgb(92,92,92) 0%, rgb(12,68,158) 50%);
+  background-image: -o-linear-gradient(bottom, rgb(92,92,92) 0%, rgb(12,68,158) 50%);
+  background-image: -moz-linear-gradient(bottom, rgb(92,92,92) 0%, rgb(12,68,158) 50%);
+  background-image: -webkit-linear-gradient(bottom, rgb(92,92,92) 0%, rgb(12,68,158) 50%);
+  background-image: -ms-linear-gradient(bottom, rgb(92,92,92) 0%, rgb(12,68,158) 50%);
+
+  background-image: -webkit-gradient(
+  	linear,
+  	left bottom,
+  	left top,
+  	color-stop(0, rgb(92,92,92)),
+  	color-stop(0.5, rgb(12,68,158))
+  );
+}
+header {
+  color: white;
+}
+h1 {
+  text-shadow: 3px 3px 5px #222;
+}
+body, input[type=text] {
+  font-family: 'Play';
+  font-size: 15pt;
+}
+#name {
+  width: 200px;     
+}
+#message {
+  width: 400px;     
+}
+label {
+  width: 120px;
+  display: inline-block;
+}
+#messages {
+  margin: 15px;
+  padding: 5px;
+  background-color: white;
+}
