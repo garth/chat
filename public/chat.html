@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title></title>
+  <title>Chat</title>
   <script src='/js/lib/jquery-1.6.4.js'></script>
   <script src='/js/lib/sproutcore-2.0.js'></script>
   <script src="/socket.io/socket.io.js"></script>
@@ -11,24 +11,33 @@
 </head>
 <body>
   <header>
-    <h1>Chat 1.0</h1>
+    <h1>Chat</h1>
 
     <script type="text/x-handlebars">
       <label>Name:</label>
-      {{view Chat.PersonView id="person" type="text" placeholder="Enter your name"}}<br>
+      {{view Chat.personView id="person" type="text" placeholder="Enter your name"}}<br>
       <label>Message:</label>
-      {{view Chat.AddMessageView id="message" type="text" placeholder="Type a message and press <enter>"}}
-      {{#view Chat.LocationButtonView id="locationButton"}}Send Location{{/view}}
+      {{view Chat.messageView id="message" type="text" placeholder="Type a message and press <enter>"}}
+      {{#view Chat.locationButton id="locationButton"}}Send Location{{/view}}
     </script>
 
   </header>
   <content>
     <div id='messages'>
+      <div id='pending'>
+  
+        <script type="text/x-handlebars">
+          {{#collection contentBinding="Chat.pending" tagName="div"}}
+            <span class="name">{{content}} is typing...</span>
+          {{/collection}}
+        </script>
+  
+      </div>
 
       <script type="text/x-handlebars">
-        {{#collection contentBinding="Chat.messagesController" tagName="div"}}
+        {{#collection contentBinding="Chat.messages" tagName="div"}}
           <span class="time">[{{content.time}}]</span>
-          <span class="name">{{content.person}}</span>
+          <span class="name">{{content.person}}</span>:
           <span class="text">{{content.message}}</span>
         {{/collection}}
       </script>

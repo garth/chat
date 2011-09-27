@@ -1,5 +1,5 @@
 html, body {
-  height:100%; margin: 0; padding: 0;
+  height:90%; margin: 20px;;
 }
 body {
   background: rgb(92,92,92) no-repeat;
@@ -41,4 +41,7 @@ label {
   margin: 15px;
   padding: 5px;
   background-color: white;
+}
+#pending {
+  background-color: #bbb;
 }
