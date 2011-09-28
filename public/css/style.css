@@ -1,8 +1,8 @@
 html, body {
-  height:90%; margin: 20px;;
+  margin: 20px;
 }
 body {
-  background: rgb(92,92,92) no-repeat;
+  background: #666 no-repeat;
   background-image: linear-gradient(bottom, rgb(92,92,92) 0%, rgb(12,68,158) 50%);
   background-image: -o-linear-gradient(bottom, rgb(92,92,92) 0%, rgb(12,68,158) 50%);
   background-image: -moz-linear-gradient(bottom, rgb(92,92,92) 0%, rgb(12,68,158) 50%);
@@ -28,10 +28,10 @@ body, input[type=text] {
   font-size: 15pt;
 }
 #name {
-  width: 200px;     
+  width: 200px;
 }
 #message {
-  width: 400px;     
+  width: 400px;
 }
 label {
   width: 120px;
