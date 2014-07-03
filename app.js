@@ -9,7 +9,8 @@ app.configure(function(){
 });
 
 //start the http server
-app.listen(process.env.C9_PORT);
+// run it on port as defined in cloud9 environment variable, only change to run it on cloud9
+app.listen(process.env.C9_PORT); 
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 
 //setup the chat server
